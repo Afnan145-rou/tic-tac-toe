@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tic‑Tac‑Toe — Responsive</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app" aria-labelledby="title">
+<header>
+<div class="brand">
+<div class="logo" aria-hidden="true"></div>
+<h1 id="title">Tic‑Tac‑Toe <span class="badge">Mobile‑responsive</span></h1>
+</div>
+<div class="controls">
+<button id="newGameBtn" title="Start a new game (keep scores)">New Game</button>
+<button id="resetScoreBtn" title="Reset the scoreboard">Reset Scores</button>
+<div class="select" role="group" aria-label="Mode selector">
+<label style="font-size:.9rem;opacity:.8;margin-right:6px">Mode</label>
+<select id="modeSelect" style="background:transparent;color:var(--text);border:0;outline:none">
+<option value="pvp">Player vs Player</option>
+<option value="ai" selected>Player vs AI</option>
+</select>
+</div>
+</div>
+</header>
+
+
+<section class="board-wrap">
+<aside class="panel side-left" aria-label="Scoreboard">
+<div class="score">
+<h3>Scoreboard</h3>
+<div class="row"><span>✖ X</span><strong id="scoreX">0</strong></div>
+<div class="row"><span>◯ O</span><strong id="scoreO">0</strong></div>
+<div class="row"><span>➖ Draws</span><strong id="scoreD">0</strong></div>
+</div>
+</aside>
+
+
+<section class="center">
+<div class="panel">
+<div class="status" id="status" role="status" aria-live="polite">Your turn: X</div>
+<div class="board" id="board" role="grid" aria-label="Tic‑Tac‑Toe Board">
+<!-- 9 buttons -->
+<button class="cell" data-index="0" role="gridcell" aria-label="Cell 1 empty"></button>
+<button class="cell" data-index="1" role="gridcell" aria-label="Cell 2 empty"></button>
+<button class="cell" data-index="2" role="gridcell" aria-label="Cell 3 empty"></button>
+<button class="cell" data-index="3" role="gridcell" aria-label="Cell 4 empty"></button>
+<button class="cell" data-index="4" role="gridcell" aria-label="Cell 5 empty"></button>
+<button class="cell" data-index="5" role="gridcell" aria-label="Cell 6 empty"></button>
+<button class="cell" data-index="6" role="gridcell" aria-label="Cell 7 empty"></button>
+<button class="cell" data-index="7" role="gridcell" aria-label="Cell 8 empty"></button>
+<button class="cell" data-index="8" role="gridcell" aria-label="Cell 9 empty"></button>
+</div>
+<div class="footer">
+<button id="swapBtn" title="Swap who goes first">Swap First Player</button>
+</div>
+</div>
+</section>
+
+
+<aside class="panel side-right">
+<h3 style="margin:.2rem 0 .8rem;color:var(--muted)">How to play</h3>
+<ol style="margin:0 0 1rem 1rem;line-height:1.6">
+<li>Tap a square to place your mark.</li>
+<li>Get three in a row to win. If all squares fill with no line, it’s a draw.</li>
+<li>Use <em>Mode</em> to switch between PvP and AI.</li>
+<li><em>Swap First Player</em> toggles who starts the next round.</li>
+</ol>
+<p style="margin:0;color:var(--muted);font-size:.95rem">Tip: Navigate with Tab. Press Enter/Space to play a focused cell.</p>
+</aside>
+</section>
+</main>
+</html>
